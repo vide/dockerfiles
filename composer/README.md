@@ -3,5 +3,5 @@
 ## Usage
 
 ```
-docker run -v $PWD:/p 0x20h/composer install
+docker run -v $PWD:/project 0x20h/composer install
 ```
