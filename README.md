@@ -12,3 +12,4 @@ docker run -v $PWD:/project 0x20h/<image> [args]
 
 - [create-react-app](create-react-app/README.md)
 - [PHP composer](composer/README.md)
+- [statsd](statsd/README.md)

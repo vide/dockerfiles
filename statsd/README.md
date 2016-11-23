@@ -1,6 +1,6 @@
 # statsd
 
-based on `alpine` and `node 7` use this image to run a statsd server.
+based on `alpine` and `node 7` use this image to run a [statsd](https://github.com/etsy/statsd) server.
 
 ## Usage
 
