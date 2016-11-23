@@ -8,5 +8,5 @@ RUN apk add --update git php5 php5-curl php5-openssl php5-json php5-phar php5-pd
     php -r "unlink('composer-setup.php');"
 
 WORKDIR /project
-COPY ../startup.sh /usr/local/bin
+COPY startup.sh /usr/local/bin
 ENTRYPOINT ["/usr/local/bin/startup.sh"]
