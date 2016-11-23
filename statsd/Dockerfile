@@ -1,4 +1,5 @@
 FROM    node:7-alpine
+MAINTAINER Jan Kohlhof <kohj@informatik.uni-marburg.de>
 
 RUN apk add --update ca-certificates wget && \
     update-ca-certificates && \
