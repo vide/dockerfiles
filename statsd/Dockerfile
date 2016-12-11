@@ -8,8 +8,8 @@ RUN apk add --update ca-certificates wget && \
     rm master.zip && \
     mv /statsd-master /statsd
 
-ADD ./config.js /statsd/config.js
+ADD config.js /statsd/config.js
+ADD startup.sh /startup.sh
 
 EXPOSE 8125/udp
-
-ENTRYPOINT ["node", "/statsd/stats.js", "/statsd/config.js"]
+ENTRYPOINT ["/startup.sh"]

@@ -113,5 +113,13 @@ Optional Variables:
                          changes. The default is true. Set this to false to disable.
 */
 {
- backends: [ "./backends/console" ]
+ backends: [ "./backends/console", "./backends/graphite"],
+ deleteIdleStats: true,
+ graphite: {
+    legacyNamespace: false
+ },
+ graphiteHost: #GRAPHITE_HOST#,
+ graphitePort: #GRAPHITE_PORT#,
+ debug: #DEBUG#,
+ dumpMessages: #DUMP_MESSAGES#
 }
