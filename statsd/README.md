@@ -12,12 +12,14 @@ docker run -p 8125:8125/udp 0x20h/statsd
 
 The following variables can be overwritten via environment variables:
 
-- `GRAPHITE_HOST`: localhost
-- `GRAPHITE_PORT`: 2003
-- `DEBUG`: false
-- `DUMP_MESSAGES`: false
+- `STATSD_GRAPHITE_HOST`: localhost
+- `STATSD_GRAPHITE_PROTOCOL`: text
+- `STATSD_GRAPHITE_PORT`: 2003
+- `STATSD_GRAPHITE_PICKLE_PORT`: 2004
+- `STATSD_DEBUG`: false
+- `STATSD_DUMP_MESSAGES`: false
 
-To configure your own configuration you cal also mount a custom
+To configure your own configuration you can also mount a custom
 [config.js](https://raw.githubusercontent.com/etsy/statsd/master/exampleConfig.js).
 
 ```
