@@ -5,4 +5,6 @@ RUN npm install -g create-react-app
 RUN mkdir /project
 WORKDIR /project
 
-ENTRYPOINT ["/usr/local/bin/create-react-app"]
+ADD startup.sh /startup.sh
+
+ENTRYPOINT ["/startup.sh"]
