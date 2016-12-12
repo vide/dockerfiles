@@ -21,9 +21,23 @@ services:
     volumes:
       - whisper:/whisper:rw
     ports:
-      - "8081:8080"
+      - "8080:8080"
     depends_on:
       - carbon
+  statsd:
+    image: 0x20h/statsd
+    ports:
+      - "8125:8125/udp"
+    environment:
+      STATSD_GRAPHITE_HOST: "carbon"
+      STATSD_GRAPHITE_PORT: 2003
+      STATSD_DEBUG: "true"
+  grafana:
+    image: grafana/grafana
+    environment:
+      GF_SERVER_ROOT_URL: http://localhost:3000
+    ports:
+      - "3000:3000"
 
 volumes:
   whisper:

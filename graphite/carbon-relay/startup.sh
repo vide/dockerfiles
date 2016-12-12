@@ -9,5 +9,5 @@ if [ ! -z "$REPLICATION_FACTOR" ]; then
 	sed -i "s#^REPLICATION_FACTOR =.*#REPLICATION_FACTOR = $REPLICATION_FACTOR#" /opt/graphite/conf/carbon.conf
 fi
 
-/opt/graphite/storage/carbon-relay.pid
+rm -f /opt/graphite/storage/carbon-relay-a.pid
 /opt/graphite/bin/carbon-relay.py --nodaemon start
