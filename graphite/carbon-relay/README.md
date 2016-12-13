@@ -1,5 +1,5 @@
 # graphite: carbon-relay instance
-Based on `python:2-alpine` this image runs a carbon-cache daemon. It uses the default installation paths under 
+Based on `python:2-alpine` this image runs a carbon-relay daemon. It uses the default installation paths under 
 `/opt/graphite`.
 
 ## Usage¬
