@@ -8,7 +8,7 @@
 [ -z "$STATSD_DUMP_MESSAGES" ] && STATSD_DUMP_MESSAGES="false"
 
 sed -i "s/#STATSD_GRAPHITE_HOST#/$STATSD_GRAPHITE_HOST/" /statsd/config.js
-sed -i "s/#STATSD_GRAPHITE_PORT#/$STATSD_GRAPHITE_PROTOCOL/" /statsd/config.js
+sed -i "s/#STATSD_GRAPHITE_PROTOCOL#/$STATSD_GRAPHITE_PROTOCOL/" /statsd/config.js
 sed -i "s/#STATSD_GRAPHITE_PORT#/$STATSD_GRAPHITE_PORT/" /statsd/config.js
 sed -i "s/#STATSD_GRAPHITE_PICKLE_PORT#/$STATSD_GRAPHITE_PICKLE_PORT/" /statsd/config.js
 sed -i "s/#STATSD_DEBUG#/$STATSD_DEBUG/" /statsd/config.js
