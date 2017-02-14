@@ -11,6 +11,7 @@ RUN apk add --update ca-certificates wget && \
 
 ADD config.js /statsd/config.js
 ADD startup.sh /startup.sh
+ADD process_metrics.js /statsd/lib/process_metrics.js
 
 EXPOSE 8125/udp
 ENTRYPOINT ["/startup.sh"]
