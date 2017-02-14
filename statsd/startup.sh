@@ -14,6 +14,7 @@ sed -i "s/#STATSD_GRAPHITE_PORT#/$STATSD_GRAPHITE_PORT/" /statsd/config.js
 sed -i "s/#STATSD_GRAPHITE_PICKLE_PORT#/$STATSD_GRAPHITE_PICKLE_PORT/" /statsd/config.js
 sed -i "s/#STATSD_GRAPHITE_GLOBAL_PREFIX#/$STATSD_GRAPHITE_GLOBAL_PREFIX/" /statsd/config.js
 sed -i "s/#STATSD_FLUSH_INTERVAL#/$STATSD_FLUSH_INTERVAL/" /statsd/config.js
+sed -i "s/#STATSD_PERCENT_THRESHOLD#/$STATSD_PERCENT_THRESHOLD/" /statsd/config.js
 sed -i "s/#STATSD_DEBUG#/$STATSD_DEBUG/" /statsd/config.js
 sed -i "s/#STATSD_DUMP_MESSAGES#/$STATSD_DUMP_MESSAGES/" /statsd/config.js
 

@@ -10,6 +10,7 @@
  graphitePort: #STATSD_GRAPHITE_PORT#,
  graphitePicklePort: #STATSD_GRAPHITE_PICKLE_PORT#,
  flushInterval: "#STATSD_FLUSH_INTERVAL#",
+ percentThreshold: [#STATSD_PERCENT_THRESHOLD#],
  debug: #STATSD_DEBUG#,
  dumpMessages: #STATSD_DUMP_MESSAGES#
 }
