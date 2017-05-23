@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 [ -z "$STATSD_GRAPHITE_HOST" ] && STATSD_GRAPHITE_HOST="localhost"
 [ -z "$STATSD_GRAPHITE_PROTOCOL" ] && STATSD_GRAPHITE_PROTOCOL="text"
@@ -17,6 +17,9 @@ sed -i "s/#STATSD_FLUSH_INTERVAL#/$STATSD_FLUSH_INTERVAL/" /statsd/config.js
 sed -i "s/#STATSD_DEBUG#/$STATSD_DEBUG/" /statsd/config.js
 sed -i "s/#STATSD_DUMP_MESSAGES#/$STATSD_DUMP_MESSAGES/" /statsd/config.js
 
-cat /statsd/config.js
 
-node /statsd/stats.js /statsd/config.js
+node /statsd/stats.js /statsd/config.js &
+trap "kill $!" SIGKILL SIGTERM SIGHUP SIGINT EXIT
+
+cat /statsd/config.js
+wait
